@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="login page .">
+    <title>Deglawy </title>
+    <!-- Page Logo -->
+    <link rel="shortcut icon" href="image/myLogo.png">
+
+
+    <!-- Bootstrap css  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- My Style Sheet  -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example2" class="bg-gradient">
+    <body class="bg-gradient">
+        <div class="container">
+            <div class="auth-container" id="authContainer">
+                <!-- Login Form -->
+                <div class="form-container" id="loginForm">
+                    <h2 class="text-center mb-4">Welcome Back!</h2>
+                    <form id="loginFormElement">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+                            <label for="loginEmail">Email address</label>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password" required>
+                            <label for="loginPassword">Password</label>
+                            <div class="invalid-feedback">Password is required.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Sign In</button>
+                        <p class="text-center">Don't have an account? <a href="#" id="showSignup">Sign Up</a></p>
+                    </form>
+                </div>
+    
+                <!-- Signup Form -->
+                <div class="form-container d-none" id="signupForm">
+                    <h2 class="text-center mb-4">Create Account</h2>
+                    <form id="signupFormElement">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="signupUsername" placeholder="Username" required minlength="3">
+                            <label for="signupUsername">Username</label>
+                            <div class="invalid-feedback">Username must be at least 3 characters long.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="signupEmail" placeholder="name@example.com" required>
+                            <label for="signupEmail">Email address</label>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Password" required minlength="6">
+                            <label for="signupPassword">Password</label>
+                            <div class="invalid-feedback">Password must be at least 6 characters long.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-3">Sign Up</button>
+                        <p class="text-center">Already have an account? <a href="#" id="showLogin">Sign In</a></p>
+                    </form>
+                </div>
+    
+                <!-- Welcome Screen -->
+                <div class="form-container d-none" id="welcomeScreen">
+                    <div class="text-center">
+                        <div class="avatar mb-4">
+                            <span class="avatar-text"></span>
+                        </div>
+                        <h2>Welcome back!</h2>
+                        <p class="welcome-text mb-4">We're glad to see you again</p>
+                        <button id="logoutButton" class="btn btn-outline-primary w-100">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Validation Alert -->
+        <div class="alert-popup d-none" id="validationAlert">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span id="alertMessage"></span>
+                <button type="button" class="btn-close" id="closeAlert"></button>
+            </div>
+        </div>
+    <!-- Bootstrap Js file -->
+    <script src=" ./js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- My Script file  -->
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
